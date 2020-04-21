@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Model Version="316" DebugEnabled="false" TraceEnabled="true" name="Model" xmlns="http://irc.construction.ualberta.ca/Simphony/Modeling">
   <Scenarios>
-    <Scenario AssemblyQualifiedName="Simphony.Modeling.Scenario, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" Enabled="true" GridSizeHeight="25" GridSizeWidth="25" HaltTime="INF" RunCount="1000" ScaleFactor="1" ShowGrid="false" ShowRulers="false" SnapToGrid="true" Seed="0" StartDate="2019-06-25T00:00:00" TimeUnit="Hour" AbsoluteError="1E-05" RelativeError="1E-05" TimeStep="1" VectorSize="0" MatrixRows="0" MatrixColumns="0" Description="" InitialState="" name="Scenario1 (4)">
+    <Scenario AssemblyQualifiedName="Simphony.Modeling.Scenario, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" Enabled="true" GridSizeHeight="25" GridSizeWidth="25" HaltTime="INF" RunCount="1000" ScaleFactor="1" ShowGrid="false" ShowRulers="false" SnapToGrid="true" Seed="0" StartDate="2019-06-25T00:00:00" TimeUnit="Hour" AbsoluteError="1E-05" RelativeError="1E-05" TimeStep="1" VectorSize="0" MatrixRows="0" MatrixColumns="0" Description="" InitialState="" name="3DCP">
       <Elements>
-        <Element AssemblyQualifiedName="Simphony.General.Task, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Servers="0" Color="0" File="(Undefined)" Resource="(Undefined)" TaskType="Unconstrained" Version="316" Location="475, 425" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="false" name="Casting Concrete">
+        <Element AssemblyQualifiedName="Simphony.General.Task, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Servers="0" Color="0" File="(Undefined)" Resource="(Undefined)" TaskType="Unconstrained" Version="316" Location="575, 425" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="false" name="Casting Concrete">
           <InputPoints>
             <InputPoint AssemblyQualifiedName="Simphony.Modeling.InputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="-16" Y="20" name="InputPoint" />
           </InputPoints>
@@ -31,11 +31,7 @@
             <Value>0</Value>
           </Priority>
         </Element>
-        <Element AssemblyQualifiedName="Simphony.General.Statistic, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Interpretation="Cost" IsIntrinsic="false" Version="316" Location="475, 25" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="true" name="CC Cost Repository">
-          <InputPoints />
-          <OutputPoints />
-        </Element>
-        <Element AssemblyQualifiedName="Simphony.General.Task, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Servers="0" Color="0" File="(Undefined)" Resource="(Undefined)" TaskType="Unconstrained" Version="316" Location="325, 225" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="false" name="Cleaning Process">
+        <Element AssemblyQualifiedName="Simphony.General.Task, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Servers="0" Color="0" File="(Undefined)" Resource="(Undefined)" TaskType="Unconstrained" Version="316" Location="425, 225" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="false" name="Cleaning Process">
           <InputPoints>
             <InputPoint AssemblyQualifiedName="Simphony.Modeling.InputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="56" Y="20" name="InputPoint" />
           </InputPoints>
@@ -86,7 +82,7 @@
             <Value AssemblyQualifiedName="Simphony.Mathematics.Constant, Simphony, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Value="0" />
           </Duration>
         </Element>
-        <Element AssemblyQualifiedName="Simphony.General.Collect, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Stat="CC Cost Repository" Color="0" Version="316" Location="600, 525" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="false" name="Cost of CC">
+        <Element AssemblyQualifiedName="Simphony.General.Collect, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Stat="Tot. Concrete Casting Costs" Color="0" Version="316" Location="725, 525" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="false" name="Cost of Casting Concrete">
           <InputPoints>
             <InputPoint AssemblyQualifiedName="Simphony.Modeling.InputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="56" Y="20" name="InputPoint" />
           </InputPoints>
@@ -127,7 +123,7 @@ End Class
             <Value>0</Value>
           </Value>
         </Element>
-        <Element AssemblyQualifiedName="Simphony.General.Collect, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Stat="IR Cost Repositroy" Color="0" Version="316" Location="325, 425" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="false" name="Cost of IR">
+        <Element AssemblyQualifiedName="Simphony.General.Collect, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Stat="Tot. Reinforcement Installation Costs" Color="0" Version="316" Location="425, 425" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="false" name="Cost of Installing Reinforcement">
           <InputPoints>
             <InputPoint AssemblyQualifiedName="Simphony.Modeling.InputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="-16" Y="20" name="InputPoint" />
           </InputPoints>
@@ -168,7 +164,7 @@ End Class
             <Value>0</Value>
           </Value>
         </Element>
-        <Element AssemblyQualifiedName="Simphony.General.Collect, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Stat="PP Cost Repository" Color="0" Version="316" Location="600, 275" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="false" name="Cost of PP">
+        <Element AssemblyQualifiedName="Simphony.General.Collect, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Stat="Tot. Printing Process Costs" Color="0" Version="316" Location="725, 275" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="false" name="Cost of Printing Process">
           <InputPoints>
             <InputPoint AssemblyQualifiedName="Simphony.Modeling.InputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="56" Y="20" name="InputPoint" />
           </InputPoints>
@@ -209,7 +205,7 @@ End Class
             <Value>0</Value>
           </Value>
         </Element>
-        <Element AssemblyQualifiedName="Simphony.General.Collect, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Stat="S Cost Repository" Color="0" Version="316" Location="325, 150" Size="50, 50" Description="Also accounts for the proportional machine price" Visible="true" Orientation="NoRotation" ReportStatistics="false" name="Cost of S">
+        <Element AssemblyQualifiedName="Simphony.General.Collect, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Stat="Tot. Setup Costs" Color="0" Version="316" Location="425, 150" Size="50, 50" Description="Also accounts for the proportional machine price" Visible="true" Orientation="NoRotation" ReportStatistics="false" name="Cost of Setup">
           <InputPoints>
             <InputPoint AssemblyQualifiedName="Simphony.Modeling.InputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="-16" Y="20" name="InputPoint" />
           </InputPoints>
@@ -250,7 +246,7 @@ End Class
             <Value>0</Value>
           </Value>
         </Element>
-        <Element AssemblyQualifiedName="Simphony.General.Collect, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Stat="T Cost Repository" Color="0" Version="316" Location="-125, 525" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="false" name="Cost of T">
+        <Element AssemblyQualifiedName="Simphony.General.Collect, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Stat="Tot. Transporation Costs" Color="0" Version="316" Location="-125, 525" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="false" name="Cost of Transportation">
           <InputPoints>
             <InputPoint AssemblyQualifiedName="Simphony.Modeling.InputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="56" Y="20" name="InputPoint" />
           </InputPoints>
@@ -291,7 +287,7 @@ End Class
             <Value>0</Value>
           </Value>
         </Element>
-        <Element AssemblyQualifiedName="Simphony.General.Counter, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Color="0" Limit="0" Initial="0" Version="316" Location="600, 425" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="true" name="CounterCC">
+        <Element AssemblyQualifiedName="Simphony.General.Counter, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Color="0" Limit="0" Initial="0" Version="316" Location="725, 425" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="true" name="Counter Casting Concrete">
           <InputPoints>
             <InputPoint AssemblyQualifiedName="Simphony.Modeling.InputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="-16" Y="20" name="InputPoint" />
           </InputPoints>
@@ -333,7 +329,7 @@ End Class
             <Value>1</Value>
           </Step>
         </Element>
-        <Element AssemblyQualifiedName="Simphony.General.Counter, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Color="0" Limit="0" Initial="0" Version="316" Location="225, 225" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="true" name="CounterCP">
+        <Element AssemblyQualifiedName="Simphony.General.Counter, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Color="0" Limit="0" Initial="0" Version="316" Location="275, 225" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="true" name="Counter Cleaning Process">
           <InputPoints>
             <InputPoint AssemblyQualifiedName="Simphony.Modeling.InputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="56" Y="20" name="InputPoint" />
           </InputPoints>
@@ -375,7 +371,7 @@ End Class
             <Value>1</Value>
           </Step>
         </Element>
-        <Element AssemblyQualifiedName="Simphony.General.Counter, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Color="0" Limit="0" Initial="0" Version="316" Location="175, 425" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="true" name="CounterIR">
+        <Element AssemblyQualifiedName="Simphony.General.Counter, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Color="0" Limit="0" Initial="0" Version="316" Location="225, 425" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="true" name="Counter Install Reinforcement">
           <InputPoints>
             <InputPoint AssemblyQualifiedName="Simphony.Modeling.InputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="-16" Y="20" name="InputPoint" />
           </InputPoints>
@@ -417,49 +413,7 @@ End Class
             <Value>1</Value>
           </Step>
         </Element>
-        <Element AssemblyQualifiedName="Simphony.General.Counter, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Color="0" Limit="0" Initial="0" Version="316" Location="600, 150" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="true" name="CounterPP">
-          <InputPoints>
-            <InputPoint AssemblyQualifiedName="Simphony.Modeling.InputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="-16" Y="20" name="InputPoint" />
-          </InputPoints>
-          <OutputPoints>
-            <OutputPoint AssemblyQualifiedName="Simphony.Modeling.OutputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="57" Y="20" name="OutputPoint" />
-          </OutputPoints>
-          <IncomingTrace AssemblyQualifiedName="Simphony.Modeling.Formula`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Simphony.Modeling.Element`1[[Simphony.Simulation.GeneralEntity, Simphony, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" CodeLanguage="VB">
-            <References />
-            <Source />
-            <Value />
-          </IncomingTrace>
-          <OutgoingTrace AssemblyQualifiedName="Simphony.Modeling.Formula`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Simphony.Modeling.Element`1[[Simphony.Simulation.GeneralEntity, Simphony, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" CodeLanguage="VB">
-            <References />
-            <Source />
-            <Value />
-          </OutgoingTrace>
-          <Step AssemblyQualifiedName="Simphony.Modeling.Formula`2[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Simphony.Modeling.Counter`1[[Simphony.Simulation.GeneralEntity, Simphony, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" CodeLanguage="VB">
-            <References>
-              <Reference>mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Reference>
-              <Reference>System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Reference>
-              <Reference>System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Reference>
-              <Reference>System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Reference>
-              <Reference>System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Reference>
-              <Reference>System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Reference>
-              <Reference>System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Reference>
-              <Reference>Microsoft.CSharp, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Reference>
-              <Reference>Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Reference>
-              <Reference>Simphony, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728</Reference>
-              <Reference>Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728</Reference>
-              <Reference>Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728</Reference>
-            </References>
-            <Source>Public Partial Class Formulas
-	Public Shared Function Formula(ByVal Element As Simphony.Modeling.Counter(Of Simphony.Simulation.GeneralEntity)) As System.Double
-		Lx(1) = TimeNow
-		Return Lx(1)
-	End Function
-End Class
-</Source>
-            <Value>1</Value>
-          </Step>
-        </Element>
-        <Element AssemblyQualifiedName="Simphony.General.Counter, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Color="0" Limit="0" Initial="0" Version="316" Location="-125, 425" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="true" name="CounterPreIR (time step)">
+        <Element AssemblyQualifiedName="Simphony.General.Counter, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Color="0" Limit="0" Initial="0" Version="316" Location="-125, 425" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="true" name="Counter Pre Installing Reinforcement (time step)">
           <InputPoints>
             <InputPoint AssemblyQualifiedName="Simphony.Modeling.InputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="-16" Y="20" name="InputPoint" />
           </InputPoints>
@@ -501,7 +455,7 @@ End Class
             <Value>1</Value>
           </Step>
         </Element>
-        <Element AssemblyQualifiedName="Simphony.General.Counter, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Color="0" Limit="0" Initial="0" Version="316" Location="325, 525" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="true" name="CounterPreT (TimeStep)">
+        <Element AssemblyQualifiedName="Simphony.General.Counter, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Color="0" Limit="0" Initial="0" Version="316" Location="375, 525" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="true" name="Counter Pre-Transportation (TimeStep)">
           <InputPoints>
             <InputPoint AssemblyQualifiedName="Simphony.Modeling.InputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="56" Y="20" name="InputPoint" />
           </InputPoints>
@@ -543,7 +497,49 @@ End Class
             <Value>1</Value>
           </Step>
         </Element>
-        <Element AssemblyQualifiedName="Simphony.General.Counter, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Color="0" Limit="0" Initial="0" Version="316" Location="200, 150" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="true" name="CounterS">
+        <Element AssemblyQualifiedName="Simphony.General.Counter, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Color="0" Limit="0" Initial="0" Version="316" Location="725, 150" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="true" name="Counter Printing Process">
+          <InputPoints>
+            <InputPoint AssemblyQualifiedName="Simphony.Modeling.InputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="-16" Y="20" name="InputPoint" />
+          </InputPoints>
+          <OutputPoints>
+            <OutputPoint AssemblyQualifiedName="Simphony.Modeling.OutputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="57" Y="20" name="OutputPoint" />
+          </OutputPoints>
+          <IncomingTrace AssemblyQualifiedName="Simphony.Modeling.Formula`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Simphony.Modeling.Element`1[[Simphony.Simulation.GeneralEntity, Simphony, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" CodeLanguage="VB">
+            <References />
+            <Source />
+            <Value />
+          </IncomingTrace>
+          <OutgoingTrace AssemblyQualifiedName="Simphony.Modeling.Formula`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Simphony.Modeling.Element`1[[Simphony.Simulation.GeneralEntity, Simphony, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" CodeLanguage="VB">
+            <References />
+            <Source />
+            <Value />
+          </OutgoingTrace>
+          <Step AssemblyQualifiedName="Simphony.Modeling.Formula`2[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Simphony.Modeling.Counter`1[[Simphony.Simulation.GeneralEntity, Simphony, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" CodeLanguage="VB">
+            <References>
+              <Reference>mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Reference>
+              <Reference>System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Reference>
+              <Reference>System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Reference>
+              <Reference>System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Reference>
+              <Reference>System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Reference>
+              <Reference>System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Reference>
+              <Reference>System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Reference>
+              <Reference>Microsoft.CSharp, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Reference>
+              <Reference>Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Reference>
+              <Reference>Simphony, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728</Reference>
+              <Reference>Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728</Reference>
+              <Reference>Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728</Reference>
+            </References>
+            <Source>Public Partial Class Formulas
+	Public Shared Function Formula(ByVal Element As Simphony.Modeling.Counter(Of Simphony.Simulation.GeneralEntity)) As System.Double
+		Lx(1) = TimeNow
+		Return Lx(1)
+	End Function
+End Class
+</Source>
+            <Value>1</Value>
+          </Step>
+        </Element>
+        <Element AssemblyQualifiedName="Simphony.General.Counter, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Color="0" Limit="0" Initial="0" Version="316" Location="275, 150" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="true" name="Counter Setup">
           <InputPoints>
             <InputPoint AssemblyQualifiedName="Simphony.Modeling.InputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="-16" Y="20" name="InputPoint" />
           </InputPoints>
@@ -585,7 +581,7 @@ End Class
             <Value>1</Value>
           </Step>
         </Element>
-        <Element AssemblyQualifiedName="Simphony.General.Counter, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Color="0" Limit="0" Initial="0" Version="316" Location="25, 525" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="true" name="CounterT">
+        <Element AssemblyQualifiedName="Simphony.General.Counter, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Color="0" Limit="0" Initial="0" Version="316" Location="50, 525" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="true" name="Counter Transportation">
           <InputPoints>
             <InputPoint AssemblyQualifiedName="Simphony.Modeling.InputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="56" Y="20" name="InputPoint" />
           </InputPoints>
@@ -627,11 +623,7 @@ End Class
             <Value>1</Value>
           </Step>
         </Element>
-        <Element AssemblyQualifiedName="Simphony.General.Statistic, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Interpretation="Cost" IsIntrinsic="false" Version="316" Location="200, 25" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="true" name="CP Cost Repository">
-          <InputPoints />
-          <OutputPoints />
-        </Element>
-        <Element AssemblyQualifiedName="Simphony.General.Task, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Servers="0" Color="0" File="(Undefined)" Resource="(Undefined)" TaskType="Unconstrained" Version="316" Location="475, 525" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="false" name="Curing Before Trasnportation">
+        <Element AssemblyQualifiedName="Simphony.General.Task, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Servers="0" Color="0" File="(Undefined)" Resource="(Undefined)" TaskType="Unconstrained" Version="316" Location="575, 525" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="false" name="Curing Before Trasnportation">
           <InputPoints>
             <InputPoint AssemblyQualifiedName="Simphony.Modeling.InputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="56" Y="20" name="InputPoint" />
           </InputPoints>
@@ -675,7 +667,7 @@ End Class
             <Value />
           </OutgoingTrace>
         </Element>
-        <Element AssemblyQualifiedName="Simphony.Cyclone.Function, Simphony.Cyclone, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" color="0" MultiplyByValue="1" DivideByValue="1" Version="316" Location="475, 275" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="false" name="Generate entities">
+        <Element AssemblyQualifiedName="Simphony.Cyclone.Function, Simphony.Cyclone, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" color="0" MultiplyByValue="1" DivideByValue="1" Version="316" Location="575, 275" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="false" name="Generate entities">
           <InputPoints>
             <InputPoint AssemblyQualifiedName="Simphony.Modeling.InputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.Modeling.RelationshipBase, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="56" Y="20" name="InputPoint" />
           </InputPoints>
@@ -777,7 +769,7 @@ End Class</Source>
             </Setter>
           </Initialization>
         </Element>
-        <Element AssemblyQualifiedName="Simphony.General.Task, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Servers="0" Color="0" File="(Undefined)" Resource="(Undefined)" TaskType="Unconstrained" Version="316" Location="25, 425" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="false" name="Install Reinforcement">
+        <Element AssemblyQualifiedName="Simphony.General.Task, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Servers="0" Color="0" File="(Undefined)" Resource="(Undefined)" TaskType="Unconstrained" Version="316" Location="50, 425" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="false" name="Install Reinforcement">
           <InputPoints>
             <InputPoint AssemblyQualifiedName="Simphony.Modeling.InputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="-16" Y="20" name="InputPoint" />
           </InputPoints>
@@ -805,15 +797,7 @@ End Class</Source>
             <Value>0</Value>
           </Priority>
         </Element>
-        <Element AssemblyQualifiedName="Simphony.General.Statistic, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Interpretation="Cost" IsIntrinsic="false" Version="316" Location="325, 25" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="true" name="IR Cost Repositroy">
-          <InputPoints />
-          <OutputPoints />
-        </Element>
-        <Element AssemblyQualifiedName="Simphony.General.Statistic, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Interpretation="Cost" IsIntrinsic="false" Version="316" Location="50, 25" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="true" name="PP Cost Repository">
-          <InputPoints />
-          <OutputPoints />
-        </Element>
-        <Element AssemblyQualifiedName="Simphony.General.Task, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Servers="0" Color="0" File="(Undefined)" Resource="(Undefined)" TaskType="Unconstrained" Version="316" Location="475, 150" Size="50, 50" Description="Multiply amount by min/ton value based on RSMeans" Visible="true" Orientation="NoRotation" ReportStatistics="false" name="Printing Process">
+        <Element AssemblyQualifiedName="Simphony.General.Task, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Servers="0" Color="0" File="(Undefined)" Resource="(Undefined)" TaskType="Unconstrained" Version="316" Location="575, 150" Size="50, 50" Description="Multiply amount by min/ton value based on RSMeans" Visible="true" Orientation="NoRotation" ReportStatistics="false" name="Printing Process">
           <InputPoints>
             <InputPoint AssemblyQualifiedName="Simphony.Modeling.InputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="-16" Y="20" name="InputPoint" />
           </InputPoints>
@@ -841,7 +825,7 @@ End Class</Source>
             <Value>0</Value>
           </Priority>
         </Element>
-        <Element AssemblyQualifiedName="Simphony.Cyclone.Queue, Simphony.Cyclone, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" color="0" initialLength="0" Version="316" Location="0, 225" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="true" name="QueueCP">
+        <Element AssemblyQualifiedName="Simphony.Cyclone.Queue, Simphony.Cyclone, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" color="0" initialLength="0" Version="316" Location="0, 225" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="true" name="Queue Cleaning Process">
           <InputPoints>
             <InputPoint AssemblyQualifiedName="Simphony.Modeling.InputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.Modeling.RelationshipBase, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="56" Y="20" name="InputPoint" />
           </InputPoints>
@@ -859,7 +843,7 @@ End Class</Source>
             <Value />
           </OutgoingTrace>
         </Element>
-        <Element AssemblyQualifiedName="Simphony.Cyclone.Queue, Simphony.Cyclone, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" color="0" initialLength="0" Version="316" Location="0, 325" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="true" name="QueueSC">
+        <Element AssemblyQualifiedName="Simphony.Cyclone.Queue, Simphony.Cyclone, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" color="0" initialLength="0" Version="316" Location="0, 325" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="true" name="Queue Shell Curing">
           <InputPoints>
             <InputPoint AssemblyQualifiedName="Simphony.Modeling.InputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.Modeling.RelationshipBase, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="56" Y="20" name="InputPoint" />
           </InputPoints>
@@ -877,11 +861,7 @@ End Class</Source>
             <Value />
           </OutgoingTrace>
         </Element>
-        <Element AssemblyQualifiedName="Simphony.General.Statistic, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Interpretation="Cost" IsIntrinsic="false" Version="316" Location="-125, 25" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="true" name="S Cost Repository">
-          <InputPoints />
-          <OutputPoints />
-        </Element>
-        <Element AssemblyQualifiedName="Simphony.General.Task, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Servers="0" Color="0" File="(Undefined)" Resource="(Undefined)" TaskType="Unconstrained" Version="316" Location="50, 150" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="false" name="Setup">
+        <Element AssemblyQualifiedName="Simphony.General.Task, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Servers="0" Color="0" File="(Undefined)" Resource="(Undefined)" TaskType="Unconstrained" Version="316" Location="125, 150" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="false" name="Setup">
           <InputPoints>
             <InputPoint AssemblyQualifiedName="Simphony.Modeling.InputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="-16" Y="20" name="InputPoint" />
           </InputPoints>
@@ -909,7 +889,7 @@ End Class</Source>
             <Value>0</Value>
           </Priority>
         </Element>
-        <Element AssemblyQualifiedName="Simphony.General.Task, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Servers="0" Color="0" File="(Undefined)" Resource="(Undefined)" TaskType="Unconstrained" Version="316" Location="325, 325" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="false" name="Shell Curing">
+        <Element AssemblyQualifiedName="Simphony.General.Task, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Servers="0" Color="0" File="(Undefined)" Resource="(Undefined)" TaskType="Unconstrained" Version="316" Location="425, 325" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="false" name="Shell Curing">
           <InputPoints>
             <InputPoint AssemblyQualifiedName="Simphony.Modeling.InputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="56" Y="20" name="InputPoint" />
           </InputPoints>
@@ -937,7 +917,7 @@ End Class</Source>
             <Value>0</Value>
           </Priority>
         </Element>
-        <Element AssemblyQualifiedName="Simphony.General.Collect, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Stat="CP Cost Repository" Color="0" Version="316" Location="125, 225" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="false" name="StatisticCollect1">
+        <Element AssemblyQualifiedName="Simphony.General.Collect, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Stat="Tot. Cleaning Process Costs" Color="0" Version="316" Location="125, 225" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="false" name="StatisticCollect1">
           <InputPoints>
             <InputPoint AssemblyQualifiedName="Simphony.Modeling.InputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="66" Y="20" name="InputPoint" />
           </InputPoints>
@@ -978,11 +958,31 @@ End Class
             <Value>0</Value>
           </Value>
         </Element>
-        <Element AssemblyQualifiedName="Simphony.General.Statistic, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Interpretation="Cost" IsIntrinsic="false" Version="316" Location="600, 25" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="true" name="T Cost Repository">
+        <Element AssemblyQualifiedName="Simphony.General.Statistic, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Interpretation="Cost" IsIntrinsic="false" Version="316" Location="200, 25" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="true" name="Tot. Cleaning Process Costs">
           <InputPoints />
           <OutputPoints />
         </Element>
-        <Element AssemblyQualifiedName="Simphony.General.Task, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Servers="0" Color="0" File="(Undefined)" Resource="(Undefined)" TaskType="Unconstrained" Version="316" Location="175, 525" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="false" name="Transportation">
+        <Element AssemblyQualifiedName="Simphony.General.Statistic, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Interpretation="Cost" IsIntrinsic="false" Version="316" Location="575, 25" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="true" name="Tot. Concrete Casting Costs">
+          <InputPoints />
+          <OutputPoints />
+        </Element>
+        <Element AssemblyQualifiedName="Simphony.General.Statistic, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Interpretation="Cost" IsIntrinsic="false" Version="316" Location="25, 25" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="true" name="Tot. Printing Process Costs">
+          <InputPoints />
+          <OutputPoints />
+        </Element>
+        <Element AssemblyQualifiedName="Simphony.General.Statistic, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Interpretation="Cost" IsIntrinsic="false" Version="316" Location="400, 25" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="true" name="Tot. Reinforcement Installation Costs">
+          <InputPoints />
+          <OutputPoints />
+        </Element>
+        <Element AssemblyQualifiedName="Simphony.General.Statistic, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Interpretation="Cost" IsIntrinsic="false" Version="316" Location="-125, 25" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="true" name="Tot. Setup Costs">
+          <InputPoints />
+          <OutputPoints />
+        </Element>
+        <Element AssemblyQualifiedName="Simphony.General.Statistic, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Interpretation="Cost" IsIntrinsic="false" Version="316" Location="725, 25" Size="50, 50" Description="" Visible="true" Orientation="NoRotation" ReportStatistics="true" name="Tot. Transporation Costs">
+          <InputPoints />
+          <OutputPoints />
+        </Element>
+        <Element AssemblyQualifiedName="Simphony.General.Task, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Servers="0" Color="0" File="(Undefined)" Resource="(Undefined)" TaskType="Unconstrained" Version="316" Location="225, 525" Size="50, 50" Description="" Visible="true" Orientation="Rotated180" ReportStatistics="false" name="Transportation">
           <InputPoints>
             <InputPoint AssemblyQualifiedName="Simphony.Modeling.InputPoint, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" RelationshipType="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" X="56" Y="20" name="InputPoint" />
           </InputPoints>
@@ -1012,12 +1012,12 @@ End Class
         </Element>
       </Elements>
       <Relationships>
-        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Casting Concrete" SourcePoint="OutputPoint" DestinationElement="CounterCC" DestinationPoint="InputPoint">
+        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Casting Concrete" SourcePoint="OutputPoint" DestinationElement="Counter Casting Concrete" DestinationPoint="InputPoint">
           <Points>
-            <Point X="551" Y="450" />
-            <Point X="561" Y="450" />
-            <Point X="676" Y="450" />
-            <Point X="666" Y="450" />
+            <Point X="651" Y="450" />
+            <Point X="661" Y="450" />
+            <Point X="699" Y="450" />
+            <Point X="709" Y="450" />
           </Points>
           <Category AssemblyQualifiedName="Simphony.Modeling.Formula`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" CodeLanguage="VB">
             <References />
@@ -1037,12 +1037,12 @@ End Class
           <Globals />
           <Locals />
         </Relationship>
-        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Cleaning Process" SourcePoint="OutputPoint" DestinationElement="CounterCP" DestinationPoint="InputPoint">
+        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Cleaning Process" SourcePoint="OutputPoint" DestinationElement="Counter Cleaning Process" DestinationPoint="InputPoint">
           <Points>
-            <Point X="308" Y="250" />
-            <Point X="298" Y="250" />
-            <Point X="301" Y="250" />
-            <Point X="291" Y="250" />
+            <Point X="408" Y="250" />
+            <Point X="398" Y="250" />
+            <Point X="351" Y="250" />
+            <Point X="341" Y="250" />
           </Points>
           <Category AssemblyQualifiedName="Simphony.Modeling.Formula`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" CodeLanguage="VB">
             <References />
@@ -1062,7 +1062,7 @@ End Class
           <Globals />
           <Locals />
         </Relationship>
-        <Relationship AssemblyQualifiedName="Simphony.Modeling.RelationshipBase, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" SourceElement="Consolidate entities" SourcePoint="OutputPoint" DestinationElement="CounterPreIR (time step)" DestinationPoint="InputPoint">
+        <Relationship AssemblyQualifiedName="Simphony.Modeling.RelationshipBase, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" SourceElement="Consolidate entities" SourcePoint="OutputPoint" DestinationElement="Counter Pre Installing Reinforcement (time step)" DestinationPoint="InputPoint">
           <Points>
             <Point X="-137" Y="300" />
             <Point X="-127" Y="300" />
@@ -1070,12 +1070,12 @@ End Class
             <Point X="-136" Y="450" />
           </Points>
         </Relationship>
-        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Cost of CC" SourcePoint="OutputPoint" DestinationElement="Curing Before Trasnportation" DestinationPoint="InputPoint">
+        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Cost of Casting Concrete" SourcePoint="OutputPoint" DestinationElement="Curing Before Trasnportation" DestinationPoint="InputPoint">
           <Points>
-            <Point X="588" Y="550" />
-            <Point X="598" Y="550" />
-            <Point X="526" Y="550" />
-            <Point X="536" Y="550" />
+            <Point X="708" Y="550" />
+            <Point X="698" Y="550" />
+            <Point X="651" Y="550" />
+            <Point X="641" Y="550" />
           </Points>
           <Category AssemblyQualifiedName="Simphony.Modeling.Formula`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" CodeLanguage="VB">
             <References />
@@ -1095,12 +1095,12 @@ End Class
           <Globals />
           <Locals />
         </Relationship>
-        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Cost of IR" SourcePoint="OutputPoint" DestinationElement="Casting Concrete" DestinationPoint="InputPoint">
+        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Cost of Installing Reinforcement" SourcePoint="OutputPoint" DestinationElement="Casting Concrete" DestinationPoint="InputPoint">
           <Points>
-            <Point X="392" Y="450" />
-            <Point X="402" Y="450" />
-            <Point X="449" Y="450" />
-            <Point X="459" Y="450" />
+            <Point X="492" Y="450" />
+            <Point X="502" Y="450" />
+            <Point X="549" Y="450" />
+            <Point X="559" Y="450" />
           </Points>
           <Category AssemblyQualifiedName="Simphony.Modeling.Formula`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" CodeLanguage="VB">
             <References />
@@ -1120,20 +1120,20 @@ End Class
           <Globals />
           <Locals />
         </Relationship>
-        <Relationship AssemblyQualifiedName="Simphony.Modeling.RelationshipBase, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" SourceElement="Cost of PP" SourcePoint="OutputPoint" DestinationElement="Generate entities" DestinationPoint="InputPoint">
+        <Relationship AssemblyQualifiedName="Simphony.Modeling.RelationshipBase, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" SourceElement="Cost of Printing Process" SourcePoint="OutputPoint" DestinationElement="Generate entities" DestinationPoint="InputPoint">
           <Points>
-            <Point X="574" Y="300" />
-            <Point X="564" Y="300" />
-            <Point X="551" Y="300" />
-            <Point X="541" Y="300" />
+            <Point X="699" Y="300" />
+            <Point X="689" Y="300" />
+            <Point X="651" Y="300" />
+            <Point X="641" Y="300" />
           </Points>
         </Relationship>
-        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Cost of S" SourcePoint="OutputPoint" DestinationElement="Printing Process" DestinationPoint="InputPoint">
+        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Cost of Setup" SourcePoint="OutputPoint" DestinationElement="Printing Process" DestinationPoint="InputPoint">
           <Points>
-            <Point X="392" Y="175" />
-            <Point X="402" Y="175" />
-            <Point X="449" Y="175" />
-            <Point X="459" Y="175" />
+            <Point X="492" Y="175" />
+            <Point X="502" Y="175" />
+            <Point X="549" Y="175" />
+            <Point X="559" Y="175" />
           </Points>
           <Category AssemblyQualifiedName="Simphony.Modeling.Formula`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" CodeLanguage="VB">
             <References />
@@ -1153,7 +1153,7 @@ End Class
           <Globals />
           <Locals />
         </Relationship>
-        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Cost of T" SourcePoint="OutputPoint" DestinationElement="Finish" DestinationPoint="InputPoint">
+        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Cost of Transportation" SourcePoint="OutputPoint" DestinationElement="Finish" DestinationPoint="InputPoint">
           <Points>
             <Point X="-142" Y="550" />
             <Point X="-152" Y="550" />
@@ -1178,12 +1178,12 @@ End Class
           <Globals />
           <Locals />
         </Relationship>
-        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="CounterCC" SourcePoint="OutputPoint" DestinationElement="Cost of CC" DestinationPoint="InputPoint">
+        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Counter Casting Concrete" SourcePoint="OutputPoint" DestinationElement="Cost of Casting Concrete" DestinationPoint="InputPoint">
           <Points>
-            <Point X="667" Y="450" />
-            <Point X="677" Y="450" />
-            <Point X="676" Y="550" />
-            <Point X="666" Y="550" />
+            <Point X="792" Y="450" />
+            <Point X="802" Y="450" />
+            <Point X="801" Y="550" />
+            <Point X="791" Y="550" />
           </Points>
           <Category AssemblyQualifiedName="Simphony.Modeling.Formula`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" CodeLanguage="VB">
             <References />
@@ -1203,10 +1203,10 @@ End Class
           <Globals />
           <Locals />
         </Relationship>
-        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="CounterCP" SourcePoint="OutputPoint" DestinationElement="StatisticCollect1" DestinationPoint="InputPoint">
+        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Counter Cleaning Process" SourcePoint="OutputPoint" DestinationElement="StatisticCollect1" DestinationPoint="InputPoint">
           <Points>
-            <Point X="208" Y="250" />
-            <Point X="198" Y="250" />
+            <Point X="258" Y="250" />
+            <Point X="248" Y="250" />
             <Point X="211" Y="250" />
             <Point X="201" Y="250" />
           </Points>
@@ -1228,12 +1228,12 @@ End Class
           <Globals />
           <Locals />
         </Relationship>
-        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="CounterIR" SourcePoint="OutputPoint" DestinationElement="Cost of IR" DestinationPoint="InputPoint">
+        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Counter Install Reinforcement" SourcePoint="OutputPoint" DestinationElement="Cost of Installing Reinforcement" DestinationPoint="InputPoint">
           <Points>
-            <Point X="242" Y="450" />
-            <Point X="252" Y="450" />
-            <Point X="299" Y="450" />
-            <Point X="309" Y="450" />
+            <Point X="292" Y="450" />
+            <Point X="302" Y="450" />
+            <Point X="399" Y="450" />
+            <Point X="409" Y="450" />
           </Points>
           <Category AssemblyQualifiedName="Simphony.Modeling.Formula`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" CodeLanguage="VB">
             <References />
@@ -1253,12 +1253,12 @@ End Class
           <Globals />
           <Locals />
         </Relationship>
-        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="CounterPP" SourcePoint="OutputPoint" DestinationElement="Cost of PP" DestinationPoint="InputPoint">
+        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Counter Pre Installing Reinforcement (time step)" SourcePoint="OutputPoint" DestinationElement="Install Reinforcement" DestinationPoint="InputPoint">
           <Points>
-            <Point X="667" Y="175" />
-            <Point X="677" Y="175" />
-            <Point X="676" Y="300" />
-            <Point X="666" Y="300" />
+            <Point X="-58" Y="450" />
+            <Point X="-48" Y="450" />
+            <Point X="24" Y="450" />
+            <Point X="34" Y="450" />
           </Points>
           <Category AssemblyQualifiedName="Simphony.Modeling.Formula`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" CodeLanguage="VB">
             <References />
@@ -1278,12 +1278,12 @@ End Class
           <Globals />
           <Locals />
         </Relationship>
-        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="CounterPreIR (time step)" SourcePoint="OutputPoint" DestinationElement="Install Reinforcement" DestinationPoint="InputPoint">
+        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Counter Pre-Transportation (TimeStep)" SourcePoint="OutputPoint" DestinationElement="Transportation" DestinationPoint="InputPoint">
           <Points>
-            <Point X="-63" Y="450" />
-            <Point X="-53" Y="450" />
-            <Point X="4" Y="450" />
-            <Point X="14" Y="450" />
+            <Point X="358" Y="550" />
+            <Point X="348" Y="550" />
+            <Point X="301" Y="550" />
+            <Point X="291" Y="550" />
           </Points>
           <Category AssemblyQualifiedName="Simphony.Modeling.Formula`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" CodeLanguage="VB">
             <References />
@@ -1303,12 +1303,12 @@ End Class
           <Globals />
           <Locals />
         </Relationship>
-        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="CounterPreT (TimeStep)" SourcePoint="OutputPoint" DestinationElement="Transportation" DestinationPoint="InputPoint">
+        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Counter Printing Process" SourcePoint="OutputPoint" DestinationElement="Cost of Printing Process" DestinationPoint="InputPoint">
           <Points>
-            <Point X="313" Y="550" />
-            <Point X="323" Y="550" />
-            <Point X="226" Y="550" />
-            <Point X="236" Y="550" />
+            <Point X="792" Y="175" />
+            <Point X="802" Y="175" />
+            <Point X="801" Y="300" />
+            <Point X="791" Y="300" />
           </Points>
           <Category AssemblyQualifiedName="Simphony.Modeling.Formula`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" CodeLanguage="VB">
             <References />
@@ -1328,12 +1328,12 @@ End Class
           <Globals />
           <Locals />
         </Relationship>
-        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="CounterS" SourcePoint="OutputPoint" DestinationElement="Cost of S" DestinationPoint="InputPoint">
+        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Counter Setup" SourcePoint="OutputPoint" DestinationElement="Cost of Setup" DestinationPoint="InputPoint">
           <Points>
-            <Point X="267" Y="175" />
-            <Point X="277" Y="175" />
-            <Point X="299" Y="175" />
-            <Point X="309" Y="175" />
+            <Point X="342" Y="175" />
+            <Point X="352" Y="175" />
+            <Point X="399" Y="175" />
+            <Point X="409" Y="175" />
           </Points>
           <Category AssemblyQualifiedName="Simphony.Modeling.Formula`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" CodeLanguage="VB">
             <References />
@@ -1353,10 +1353,10 @@ End Class
           <Globals />
           <Locals />
         </Relationship>
-        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="CounterT" SourcePoint="OutputPoint" DestinationElement="Cost of T" DestinationPoint="InputPoint">
+        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Counter Transportation" SourcePoint="OutputPoint" DestinationElement="Cost of Transportation" DestinationPoint="InputPoint">
           <Points>
-            <Point X="8" Y="550" />
-            <Point X="-2" Y="550" />
+            <Point X="33" Y="550" />
+            <Point X="23" Y="550" />
             <Point X="-49" Y="550" />
             <Point X="-59" Y="550" />
           </Points>
@@ -1378,12 +1378,12 @@ End Class
           <Globals />
           <Locals />
         </Relationship>
-        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Curing Before Trasnportation" SourcePoint="OutputPoint" DestinationElement="CounterPreT (TimeStep)" DestinationPoint="InputPoint">
+        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Curing Before Trasnportation" SourcePoint="OutputPoint" DestinationElement="Counter Pre-Transportation (TimeStep)" DestinationPoint="InputPoint">
           <Points>
-            <Point X="454" Y="550" />
-            <Point X="464" Y="550" />
-            <Point X="376" Y="550" />
-            <Point X="386" Y="550" />
+            <Point X="549" Y="550" />
+            <Point X="539" Y="550" />
+            <Point X="451" Y="550" />
+            <Point X="441" Y="550" />
           </Points>
           <Category AssemblyQualifiedName="Simphony.Modeling.Formula`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" CodeLanguage="VB">
             <References />
@@ -1405,26 +1405,26 @@ End Class
         </Relationship>
         <Relationship AssemblyQualifiedName="Simphony.Modeling.RelationshipBase, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" SourceElement="Generate entities" SourcePoint="OutputPoint" DestinationElement="Shell Curing" DestinationPoint="InputPoint">
           <Points>
-            <Point X="458" Y="300" />
-            <Point X="448" Y="300" />
-            <Point X="401" Y="350" />
-            <Point X="391" Y="350" />
+            <Point X="558" Y="300" />
+            <Point X="548" Y="300" />
+            <Point X="501" Y="350" />
+            <Point X="491" Y="350" />
           </Points>
         </Relationship>
         <Relationship AssemblyQualifiedName="Simphony.Modeling.RelationshipBase, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" SourceElement="Generate entities" SourcePoint="OutputPoint" DestinationElement="Cleaning Process" DestinationPoint="InputPoint">
           <Points>
-            <Point X="458" Y="300" />
-            <Point X="448" Y="300" />
-            <Point X="401" Y="250" />
-            <Point X="391" Y="250" />
+            <Point X="558" Y="300" />
+            <Point X="548" Y="300" />
+            <Point X="501" Y="250" />
+            <Point X="491" Y="250" />
           </Points>
         </Relationship>
         <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Initialize" SourcePoint="OutputPoint" DestinationElement="Setup" DestinationPoint="InputPoint">
           <Points>
             <Point X="-58" Y="175" />
             <Point X="-48" Y="175" />
-            <Point X="24" Y="175" />
-            <Point X="34" Y="175" />
+            <Point X="99" Y="175" />
+            <Point X="109" Y="175" />
           </Points>
           <Category AssemblyQualifiedName="Simphony.Modeling.Formula`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" CodeLanguage="VB">
             <References />
@@ -1444,12 +1444,12 @@ End Class
           <Globals />
           <Locals />
         </Relationship>
-        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Install Reinforcement" SourcePoint="OutputPoint" DestinationElement="CounterIR" DestinationPoint="InputPoint">
+        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Install Reinforcement" SourcePoint="OutputPoint" DestinationElement="Counter Install Reinforcement" DestinationPoint="InputPoint">
           <Points>
-            <Point X="92" Y="450" />
-            <Point X="102" Y="450" />
-            <Point X="149" Y="450" />
-            <Point X="159" Y="450" />
+            <Point X="117" Y="450" />
+            <Point X="127" Y="450" />
+            <Point X="199" Y="450" />
+            <Point X="209" Y="450" />
           </Points>
           <Category AssemblyQualifiedName="Simphony.Modeling.Formula`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" CodeLanguage="VB">
             <References />
@@ -1469,12 +1469,12 @@ End Class
           <Globals />
           <Locals />
         </Relationship>
-        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Printing Process" SourcePoint="OutputPoint" DestinationElement="CounterPP" DestinationPoint="InputPoint">
+        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Printing Process" SourcePoint="OutputPoint" DestinationElement="Counter Printing Process" DestinationPoint="InputPoint">
           <Points>
-            <Point X="542" Y="175" />
-            <Point X="552" Y="175" />
-            <Point X="574" Y="175" />
-            <Point X="584" Y="175" />
+            <Point X="642" Y="175" />
+            <Point X="652" Y="175" />
+            <Point X="699" Y="175" />
+            <Point X="709" Y="175" />
           </Points>
           <Category AssemblyQualifiedName="Simphony.Modeling.Formula`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" CodeLanguage="VB">
             <References />
@@ -1494,7 +1494,7 @@ End Class
           <Globals />
           <Locals />
         </Relationship>
-        <Relationship AssemblyQualifiedName="Simphony.Modeling.RelationshipBase, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" SourceElement="QueueCP" SourcePoint="OutputPoint" DestinationElement="Consolidate entities" DestinationPoint="InputPoint">
+        <Relationship AssemblyQualifiedName="Simphony.Modeling.RelationshipBase, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" SourceElement="Queue Cleaning Process" SourcePoint="OutputPoint" DestinationElement="Consolidate entities" DestinationPoint="InputPoint">
           <Points>
             <Point X="-17" Y="250" />
             <Point X="-27" Y="250" />
@@ -1502,20 +1502,20 @@ End Class
             <Point X="-59" Y="300" />
           </Points>
         </Relationship>
-        <Relationship AssemblyQualifiedName="Simphony.Modeling.RelationshipBase, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" SourceElement="QueueSC" SourcePoint="OutputPoint" DestinationElement="Consolidate entities" DestinationPoint="InputPoint">
+        <Relationship AssemblyQualifiedName="Simphony.Modeling.RelationshipBase, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" SourceElement="Queue Shell Curing" SourcePoint="OutputPoint" DestinationElement="Consolidate entities" DestinationPoint="InputPoint">
           <Points>
-            <Point X="-17" Y="350" />
-            <Point X="-27" Y="350" />
-            <Point X="-49" Y="300" />
-            <Point X="-59" Y="300" />
+            <Point X="-12" Y="350" />
+            <Point X="-2" Y="350" />
+            <Point X="-74" Y="300" />
+            <Point X="-64" Y="300" />
           </Points>
         </Relationship>
-        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Setup" SourcePoint="OutputPoint" DestinationElement="CounterS" DestinationPoint="InputPoint">
+        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Setup" SourcePoint="OutputPoint" DestinationElement="Counter Setup" DestinationPoint="InputPoint">
           <Points>
-            <Point X="117" Y="175" />
-            <Point X="127" Y="175" />
-            <Point X="174" Y="175" />
-            <Point X="184" Y="175" />
+            <Point X="192" Y="175" />
+            <Point X="202" Y="175" />
+            <Point X="249" Y="175" />
+            <Point X="259" Y="175" />
           </Points>
           <Category AssemblyQualifiedName="Simphony.Modeling.Formula`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" CodeLanguage="VB">
             <References />
@@ -1535,15 +1535,15 @@ End Class
           <Globals />
           <Locals />
         </Relationship>
-        <Relationship AssemblyQualifiedName="Simphony.Modeling.RelationshipBase, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" SourceElement="Shell Curing" SourcePoint="OutputPoint" DestinationElement="QueueSC" DestinationPoint="InputPoint">
+        <Relationship AssemblyQualifiedName="Simphony.Modeling.RelationshipBase, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" SourceElement="Shell Curing" SourcePoint="OutputPoint" DestinationElement="Queue Shell Curing" DestinationPoint="InputPoint">
           <Points>
-            <Point X="308" Y="350" />
-            <Point X="298" Y="350" />
-            <Point X="76" Y="350" />
-            <Point X="66" Y="350" />
+            <Point X="413" Y="350" />
+            <Point X="423" Y="350" />
+            <Point X="51" Y="350" />
+            <Point X="61" Y="350" />
           </Points>
         </Relationship>
-        <Relationship AssemblyQualifiedName="Simphony.Modeling.RelationshipBase, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" SourceElement="StatisticCollect1" SourcePoint="OutputPoint" DestinationElement="QueueCP" DestinationPoint="InputPoint">
+        <Relationship AssemblyQualifiedName="Simphony.Modeling.RelationshipBase, Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" SourceElement="StatisticCollect1" SourcePoint="OutputPoint" DestinationElement="Queue Cleaning Process" DestinationPoint="InputPoint">
           <Points>
             <Point X="108" Y="250" />
             <Point X="98" Y="250" />
@@ -1551,12 +1551,12 @@ End Class
             <Point X="66" Y="250" />
           </Points>
         </Relationship>
-        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Transportation" SourcePoint="OutputPoint" DestinationElement="CounterT" DestinationPoint="InputPoint">
+        <Relationship AssemblyQualifiedName="Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" LocalVersion="1" Version="316" SourceElement="Transportation" SourcePoint="OutputPoint" DestinationElement="Counter Transportation" DestinationPoint="InputPoint">
           <Points>
-            <Point X="149" Y="550" />
-            <Point X="139" Y="550" />
-            <Point X="101" Y="550" />
-            <Point X="91" Y="550" />
+            <Point X="199" Y="550" />
+            <Point X="189" Y="550" />
+            <Point X="126" Y="550" />
+            <Point X="116" Y="550" />
           </Points>
           <Category AssemblyQualifiedName="Simphony.Modeling.Formula`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Simphony.General.GeneralRelationship, Simphony.General, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728]], Simphony.Modeling, Version=4.6.0.0, Culture=neutral, PublicKeyToken=0870fe8ecaba8728" Version="316" CodeLanguage="VB">
             <References />
